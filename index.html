@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CAMONA WEBPAGE</title>
+    <title>camona</title>
 
 
     <!-- =========================================
@@ -117,9 +117,7 @@
             z-index: 1000;
 
             /*
-                The logo is completely independent
-                from the navigation and stays exactly
-                in the middle of the screen.
+                The logo 
             */
 
             display: flex;
@@ -141,7 +139,7 @@
 
             border-bottom:
                 1px solid
-                rgba(255, 105, 180, 0.30);
+                rgba(255, 35, 60, 0.30);
 
             box-shadow:
 
@@ -289,15 +287,15 @@
 
                 linear-gradient(
                     90deg,
-                    #ffb6c1,
-                    #ff69b4
+                    #52d6d0,
+                    #0066ff
                 );
 
             box-shadow:
 
-                0 0 7px #ffb6c1,
+                0 0 7px #52d6d0,
 
-                0 0 12px #ff69b4;
+                0 0 12px #0066ff;
 
             transition:
                 width 0.3s ease;
@@ -345,8 +343,7 @@
             justify-content: center;
 
             /*
-                This remains centered regardless of
-                where the navigation sits.
+                This remains.
             */
 
             width: 320px;
@@ -1502,7 +1499,7 @@
             header {
 
                 height:
-                    80px;
+                   80px;
 
                 padding:
                     0 10px;
@@ -1774,6 +1771,686 @@
 }
 </style>
 
+
+<style id="new-color-scheme">
+/* =========================================
+   NEW COLOR SCHEME
+   Off-white background, black text, hot-pink highlights
+========================================= */
+
+:root {
+    --off-white: #F5F2EC;
+    --black: #111111;
+    --pink: #FF69FF;
+    --pink-soft: rgba(255, 105, 255, 0.22);
+    --pink-glow: rgba(255, 105, 255, 0.45);
+}
+
+/* Main page */
+body {
+    background: var(--off-white);
+    color: var(--black);
+}
+
+/* Keep the photography, but remove the burgundy cast */
+.background {
+    background-image:
+        linear-gradient(
+            rgba(245, 242, 236, 0.08),
+            rgba(245, 242, 236, 0.30)
+        ),
+        url("band-photo.jpg");
+    filter: saturate(1.05);
+}
+
+.background::before {
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(245, 242, 236, 0.02),
+            rgba(245, 242, 236, 0.48)
+        );
+}
+
+/* Header */
+header {
+    background: var(--off-white);
+    border-bottom: 1px solid var(--pink);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.12);
+}
+
+header::before {
+    background:
+        repeating-linear-gradient(
+            105deg,
+            transparent 0px,
+            rgba(255, 105, 255, 0.035) 30px,
+            rgba(0, 0, 0, 0.035) 65px,
+            transparent 100px
+        );
+}
+
+/* Navigation */
+.top-menu a {
+    color: var(--black);
+    text-shadow: none;
+}
+
+.top-menu a::after {
+    background: var(--pink);
+    box-shadow: 0 0 7px var(--pink), 0 0 12px var(--pink);
+}
+
+.top-menu a:hover {
+    color: var(--pink);
+    text-shadow: 0 0 6px var(--pink), 0 0 15px var(--pink);
+}
+
+/* Logo: retain the original logo but change colored glow to pink */
+.band-logo img {
+    filter:
+        drop-shadow(0 0 7px var(--pink))
+        drop-shadow(0 0 23px var(--pink-glow));
+}
+
+.band-logo:hover img {
+    filter:
+        drop-shadow(0 0 10px var(--pink))
+        drop-shadow(0 0 30px var(--pink-glow));
+}
+
+/* Landing image */
+.landing {
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(245, 242, 236, 0.02),
+            rgba(245, 242, 236, 0.02) 50%,
+            rgba(245, 242, 236, 0.35) 100%
+        ),
+        url("band-photo.jpg");
+}
+
+.landing::after {
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 30%,
+            rgba(245, 242, 236, 0.18) 100%
+        );
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    color: var(--pink);
+}
+
+.scroll-line {
+    background: linear-gradient(
+        to bottom,
+        var(--pink),
+        var(--black)
+    );
+    box-shadow: 0 0 8px var(--pink), 0 0 10px var(--pink);
+}
+
+/* Main content panel */
+.content-panel {
+    background: rgba(245, 242, 236, 0.94);
+    border: 1px solid rgba(17, 17, 17, 0.18);
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.18),
+        inset 0 0 70px rgba(255, 105, 255, 0.035);
+    color: var(--black);
+}
+
+.content-panel::before {
+    background: var(--pink);
+    box-shadow: 0 0 10px var(--pink), 0 0 30px var(--pink);
+}
+
+.content-panel::after {
+    background: var(--black);
+    box-shadow: 0 0 10px rgba(17, 17, 17, 0.35);
+}
+
+/* Sections and typography */
+section {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.14);
+}
+
+.section-title {
+    color: var(--black) !important;
+    text-shadow: none !important;
+}
+
+section p {
+    color: #333333;
+}
+
+/* About image */
+.about-image {
+    background-image:
+        linear-gradient(
+            rgba(245, 242, 236, 0.04),
+            rgba(245, 242, 236, 0.18)
+        ),
+        url("band-photo-2.jpg");
+    border: 1px solid rgba(17, 17, 17, 0.22);
+    box-shadow:
+        -8px 8px 0 rgba(255, 105, 255, 0.22),
+        8px 8px 0 rgba(17, 17, 17, 0.12);
+}
+
+/* Releases */
+.release {
+    background: var(--off-white);
+    border: 1px solid rgba(17, 17, 17, 0.20);
+    color: var(--black);
+}
+
+.release:hover {
+    border-color: var(--pink);
+    box-shadow:
+        -8px 0 25px rgba(255, 105, 255, 0.20),
+        8px 0 25px rgba(17, 17, 17, 0.10);
+}
+
+.release p,
+.show-month,
+.show-info p {
+    color: #555555;
+}
+
+/* Video */
+.video-container {
+    border: 1px solid rgba(17, 17, 17, 0.22);
+    box-shadow: 0 0 25px rgba(255, 105, 255, 0.16);
+}
+
+/* Shows */
+.show {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.14);
+}
+
+.show-date {
+    color: var(--black);
+    text-shadow: none;
+}
+
+/* Buttons */
+.ticket-button {
+    border-color: var(--pink);
+    color: var(--black);
+}
+
+.ticket-button:hover {
+    background: var(--pink);
+    color: var(--black);
+    box-shadow: 0 0 15px var(--pink), 0 0 30px var(--pink-glow);
+}
+
+/* Booking form */
+.form-group label {
+    color: var(--black);
+}
+
+.form-group input,
+.form-group textarea {
+    border: 1px solid rgba(17, 17, 17, 0.28);
+    background: rgba(255, 255, 255, 0.45);
+    color: var(--black);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #777777;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--pink);
+    box-shadow:
+        0 0 10px rgba(255, 105, 255, 0.25),
+        inset 0 0 15px rgba(255, 105, 255, 0.04);
+}
+
+.contact-submit {
+    border-color: var(--pink);
+    color: var(--black);
+}
+
+.contact-submit:hover {
+    background: var(--pink);
+    color: var(--black);
+    box-shadow:
+        0 0 15px var(--pink),
+        0 0 35px var(--pink-glow);
+}
+
+.contact-note {
+    color: #666666;
+}
+
+/* Footer */
+footer {
+    background: var(--off-white);
+    border-top: 1px solid rgba(17, 17, 17, 0.18);
+}
+
+.socials a {
+    color: var(--black);
+}
+
+.socials a:hover {
+    color: var(--pink);
+    text-shadow: 0 0 8px var(--pink), 0 0 15px var(--pink);
+}
+
+footer p {
+    color: #666666;
+}
+
+/* Intro screen and play button */
+.play-button {
+    border-color: var(--pink);
+    box-shadow:
+        0 0 18px var(--pink-glow),
+        0 0 45px rgba(255, 105, 255, 0.22);
+}
+
+.play-button:hover {
+    box-shadow:
+        0 0 25px rgba(255, 105, 255, 0.9),
+        0 0 65px rgba(255, 105, 255, 0.35);
+}
+
+.play-icon {
+    border-left-color: var(--pink);
+    filter: drop-shadow(0 0 8px var(--pink));
+}
+
+@keyframes playGlow {
+    0%, 100% {
+        box-shadow: 0 0 18px var(--pink-glow),
+                    0 0 45px rgba(255, 105, 255, 0.22);
+    }
+    50% {
+        box-shadow: 0 0 28px rgba(255, 105, 255, 0.95),
+                    0 0 70px rgba(255, 105, 255, 0.35);
+    }
+}
+
+.intro-logo {
+    filter:
+        drop-shadow(0 0 16px rgba(255, 105, 255, 0.8))
+        drop-shadow(0 0 42px rgba(255, 105, 255, 0.35));
+}
+
+.sparkle {
+    text-shadow: 0 0 10px #fff, 0 0 22px var(--pink);
+}
+
+/* Latest video heading */
+#releases h3 {
+    color: var(--black);
+}
+</style>
+
+
+<style id="final-blended-layout">
+/* Smooth transition from the hero image into the About section */
+.landing {
+    position: relative;
+    isolation: isolate;
+    background-color: var(--off-white);
+    margin-bottom: 0;
+}
+
+/* Fade the lower edge of the photo into the page color */
+.landing::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 180px;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(245, 242, 236, 0) 0%,
+        rgba(245, 242, 236, 0.45) 45%,
+        var(--off-white) 100%
+    );
+}
+
+/* Remove the old dark vignette that created the hard edge */
+.landing::after {
+    background: linear-gradient(
+        to bottom,
+        transparent 55%,
+        rgba(245, 242, 236, 0.16) 78%,
+        rgba(245, 242, 236, 0.35) 100%
+    );
+}
+
+/* Keep the scroll indicator completely hidden */
+.scroll-indicator,
+.scroll-line {
+    display: none !important;
+}
+
+/* Ensure the content begins softly, without a black divider */
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    margin-top: -1px;
+}
+
+.content-panel {
+    border-top-color: transparent;
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.08),
+        inset 0 0 70px rgba(255, 105, 255, 0.035);
+}
+
+/* Booking inquiry text instead of a form */
+.booking-contact {
+    max-width: 850px;
+    padding: 25px 0 10px;
+}
+
+.booking-contact p {
+    color: var(--black);
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+.booking-contact a {
+    color: var(--pink);
+    font-weight: 600;
+    text-decoration: none;
+    text-shadow: 0 0 8px rgba(255, 105, 255, 0.25);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.booking-contact a:hover {
+    color: var(--black);
+    text-shadow: none;
+}
+</style>
+
+
+<style id="pink-italic-title-overrides">
+    /* Elegant italic typography throughout */
+    *, *::before, *::after {
+        font-family: "Cormorant Garamond", "Baskerville", "Times New Roman", serif !important;
+        font-style: italic !important;
+    }
+
+    /* Hot-pink titles and headings */
+    h1, h2, h3, h4, h5, h6,
+    .title, .section-title, .section-heading,
+    .header-title, .logo-text, .nav-link,
+    .content-panel h1, .content-panel h2, .content-panel h3,
+    .content-panel h4, .content-panel h5, .content-panel h6,
+    .landing h1, .landing h2, .landing h3,
+    .landing h4, .landing h5, .landing h6,
+    .site-header, header, header *,
+    .menu, .menu *, .navigation, .navigation *,
+    .booking-contact p, .booking-contact a {
+        color: #FF69FF !important;
+        font-style: italic !important;
+    }
+
+    /* Keep ordinary body copy black while retaining the italic style */
+    p, li, label, input, textarea, select, option,
+    .content-panel p, .content-panel li,
+    .about-text, .show-item, .contact-form {
+        color: #111111;
+        font-style: italic !important;
+    }
+
+    /* Pink interactive accents */
+    a:hover, button:hover, .nav-link:hover {
+        color: #FF69FF !important;
+    }
+
+    input, textarea, select {
+        font-style: italic !important;
+    }
+</style>
+
+
+<style id="neon-pink-heading-overrides">
+    /* Keep the header exactly as it is */
+    header, header *, .site-header, .site-header * {
+        text-shadow: none !important;
+    }
+
+    /* Section headings: non-italic, dimensional neon hot-pink signage */
+    .content-panel h1,
+    .content-panel h2,
+    .content-panel h3,
+    .content-panel h4,
+    .content-panel h5,
+    .content-panel h6,
+    .section-title,
+    .section-heading,
+    .content-wrapper h1,
+    .content-wrapper h2,
+    .content-wrapper h3 {
+        color: #FF69FF !important;
+        font-family: "Cormorant Garamond", "Baskerville", "Times New Roman", serif !important;
+        font-style: normal !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.045em;
+        text-shadow:
+            0 1px 0 #ffb8ff,
+            0 2px 0 #ff8cff,
+            0 3px 0 #d83bd8,
+            0 5px 8px rgba(255, 0, 255, 0.45),
+            0 0 5px #FF69FF,
+            0 0 14px #FF69FF,
+            0 0 28px rgba(255, 105, 255, 0.9) !important;
+    }
+
+    /* Make common section labels look like raised neon lettering */
+    .content-panel .section-title,
+    .content-panel .section-heading {
+        transform: translateZ(0);
+        filter: drop-shadow(0 3px 2px rgba(90, 0, 70, 0.28));
+    }
+</style>
+
+
+<style id="hollow-pink-heading-overrides">
+    /* Section headings: high-contrast hollow neon-sign lettering, no glow */
+    .content-panel h1,
+    .content-panel h2,
+    .content-panel h3,
+    .content-panel h4,
+    .content-panel h5,
+    .content-panel h6,
+    .section-title,
+    .section-heading,
+    .content-wrapper h1,
+    .content-wrapper h2,
+    .content-wrapper h3 {
+        color: transparent !important;
+        -webkit-text-fill-color: transparent !important;
+        -webkit-text-stroke: 1.5px #FF69FF !important;
+        text-shadow: none !important;
+        font-style: normal !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.045em;
+        filter: none !important;
+    }
+
+    /* Shows information stays solid black */
+    .shows,
+    .shows *,
+    .show,
+    .show *,
+    .show-item,
+    .show-item *,
+    .shows-list,
+    .shows-list *,
+    [class*="show"] p,
+    [class*="show"] li,
+    [class*="show"] span,
+    [class*="show"] a,
+    [class*="show"] strong {
+        color: #111111 !important;
+        -webkit-text-fill-color: #111111 !important;
+        -webkit-text-stroke: 0 !important;
+        text-shadow: none !important;
+    }
+</style>
+
+
+<style id="pink-slider-and-photo-credit">
+    /* Wider scrolling/content panel with hot-pink edges on both sides */
+    .content-wrapper {
+        width: min(94vw, 1500px) !important;
+        max-width: 1500px !important;
+    }
+
+    .content-panel {
+        border-left: 2px solid #FF69FF !important;
+        border-right: 2px solid #FF69FF !important;
+        box-shadow: none !important;
+    }
+
+    /* Remove any remaining dark/black right-side edge or inset */
+    .content-panel::before,
+    .content-panel::after {
+        border-color: #FF69FF !important;
+        box-shadow: none !important;
+    }
+
+    /* Tiny About photo credit; does not affect layout flow */
+    .about-photo-credit {
+        position: absolute;
+        left: 0;
+        bottom: -12px;
+        margin: 0;
+        color: #111111 !important;
+        font-family: "Cormorant Garamond", "Baskerville", "Times New Roman", serif !important;
+        font-size: 8px !important;
+        line-height: 1 !important;
+        font-style: normal !important;
+        letter-spacing: 0.02em;
+        z-index: 5;
+        pointer-events: none;
+    }
+</style>
+
+
+<style id="final-slider-edge-and-credit-fix">
+    /* Remove the black right edge from the scrolling section */
+    .content-wrapper,
+    .content-panel,
+    .content-panel-inner,
+    .scrolling-panel,
+    .scroll-container {
+        border-right: 0 !important;
+        box-shadow: none !important;
+        background-image: none !important;
+    }
+
+    .content-panel {
+        border-left: 3px solid #FF69FF !important;
+        border-right: 3px solid #FF69FF !important;
+        outline: 0 !important;
+        overflow: visible !important;
+    }
+
+    .content-panel::before,
+    .content-panel::after,
+    .content-wrapper::before,
+    .content-wrapper::after {
+        border-right: 0 !important;
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+
+    /* Ensure the About credit is visible and does not move surrounding content */
+    .about-photo-credit {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        left: auto !important;
+        bottom: auto !important;
+        margin-top: 3px !important;
+        width: 100% !important;
+        color: #111111 !important;
+        -webkit-text-fill-color: #111111 !important;
+        font-family: "Cormorant Garamond", "Baskerville", "Times New Roman", serif !important;
+        font-size: 8px !important;
+        line-height: 1 !important;
+        font-style: normal !important;
+        text-align: left !important;
+        z-index: 20 !important;
+        pointer-events: none !important;
+    }
+</style>
+
+
+<style id="camona-funky-section-headings">
+    /* Rounder, funky display style for the main section headings only */
+    .content-panel h1,
+    .content-panel h2,
+    .content-panel h3,
+    .section-title,
+    .section-heading {
+        font-family: "Cooper Black", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif !important;
+        font-style: normal !important;
+        font-weight: 900 !important;
+        letter-spacing: 0.02em !important;
+        -webkit-text-stroke: 1.5px #FF69FF !important;
+        color: transparent !important;
+        -webkit-text-fill-color: transparent !important;
+        text-shadow: none !important;
+    }
+</style>
+
+
+<style id="release-title-black-bold">
+    .release-title,
+    .release-name,
+    .release-card h3,
+    .release-card h4,
+    .releases h3,
+    .releases h4,
+    [class*="release"] .title,
+    [class*="release"] h3,
+    [class*="release"] h4 {
+        color: #111111 !important;
+        -webkit-text-fill-color: #111111 !important;
+        -webkit-text-stroke: 0 !important;
+        text-shadow: none !important;
+        font-weight: 900 !important;
+        font-style: normal !important;
+    }
+
+    .about-photo-credit {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        color: #111111 !important;
+        -webkit-text-fill-color: #111111 !important;
+        font-size: 8px !important;
+        line-height: 1 !important;
+        font-style: normal !important;
+        margin-top: 3px !important;
+        position: relative !important;
+        z-index: 20 !important;
+    }
+</style>
+
 </head>
 
 
@@ -1786,6 +2463,7 @@
   <div class="intro-overlay"></div>
   <div class="intro-logo-wrap">
     <img class="intro-logo" src="band-logo.png" alt="Band logo">
+<span class="about-photo-credit">Photo credits: lutecia.h</span>
     <span class="sparkle sparkle-1">✦</span><span class="sparkle sparkle-2">✧</span>
     <span class="sparkle sparkle-3">✦</span><span class="sparkle sparkle-4">✧</span>
   </div>
@@ -1867,16 +2545,6 @@
 
         <section class="landing">
 
-
-            <div class="scroll-indicator">
-
-                <span>
-                    Scroll
-                </span>
-
-                <div class="scroll-line"></div>
-
-            </div>
 
 
         </section>
@@ -1969,7 +2637,7 @@ really big emotions
                             </h3>
 
                             <p>
-                                2026
+                                2025
                             </p>
 
                         </div>
@@ -2037,15 +2705,15 @@ really big emotions
                                 margin-bottom: 25px;
                             "
                         >
-                            Music Videos
+                            Latest Video
                         </h3>
 
 
                         <div class="video-container">
 
                             <iframe
-                                src="https://www.youtube.com/watch?v=z7SoGZAPwrY&list=RDz7SoGZAPwrY&start_radio=1"
-                                title="Banter"
+                                src="https://youtu.be/z7SoGZAPwrY?si=cBPHVPy1hqw_i8sP"
+                                title="Banter 2025"
                                 allow="
                                     accelerometer;
                                     autoplay;
@@ -2084,87 +2752,7 @@ really big emotions
                         <div class="show-date">
 
                             <span class="show-day">
-                                15
-                            </span>
-
-                            <span class="show-month">
-                                OCT
-                            </span>
-
-                        </div>
-
-
-                        <div class="show-info">
-
-                            <h3>
-                                Leipzig, Germany
-                            </h3>
-
-                            <p>
-                                Venue Name · 20:00
-                            </p>
-
-                        </div>
-
-
-                        <a
-                            href="#"
-                            class="ticket-button"
-                        >
-                            Tickets
-                        </a>
-
-
-                    </div>
-
-
-                    <div class="show">
-
-
-                        <div class="show-date">
-
-                            <span class="show-day">
-                                22
-                            </span>
-
-                            <span class="show-month">
-                                OCT
-                            </span>
-
-                        </div>
-
-
-                        <div class="show-info">
-
-                            <h3>
-                                Leipzig, Germany
-                            </h3>
-
-                            <p>
-                                Venue Name · 19:30
-                            </p>
-
-                        </div>
-
-
-                        <a
-                            href="#"
-                            class="ticket-button"
-                        >
-                            Tickets
-                        </a>
-
-
-                    </div>
-
-
-                    <div class="show">
-
-
-                        <div class="show-date">
-
-                            <span class="show-day">
-                                05
+                                14
                             </span>
 
                             <span class="show-month">
@@ -2177,11 +2765,91 @@ really big emotions
                         <div class="show-info">
 
                             <h3>
+                                Leipzig, Germany
+                            </h3>
+
+                            <p>
+                                Horns Erben · 20:00
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="ticket-button"
+                        >
+                            Tickets
+                        </a>
+
+
+                    </div>
+
+
+                    <div class="show">
+
+
+                        <div class="show-date">
+
+                            <span class="show-day">
+                               12
+                            </span>
+
+                            <span class="show-month">
+                               DEC
+                            </span>
+
+                        </div>
+
+
+                        <div class="show-info">
+
+                            <h3>
                                 Dresden, Germany
                             </h3>
 
                             <p>
-                                Venue Name · 20:00
+                               Blue Note  · 19:30
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="ticket-button"
+                        >
+                            Tickets
+                        </a>
+
+
+                    </div>
+
+
+                    <div class="show">
+
+
+                        <div class="show-date">
+
+                            <span class="show-day">
+                                11
+                            </span>
+
+                            <span class="show-month">
+                               DEC
+                            </span>
+
+                        </div>
+
+
+                        <div class="show-info">
+
+                            <h3>
+                                Leipzig, Germany
+                            </h3>
+
+                            <p>
+                                GVL · 20:00
                             </p>
 
                         </div>
@@ -2218,91 +2886,20 @@ really big emotions
                         <p>
                             Want to book the band, ask a
                             question, or just say hello?
-                            Leave your details below and
-                            we will get in touch.
+                           
                         </p>
 
                     </div>
 
 
-                    <form
-                        class="contact-form"
-                        action="#"
-                        method="POST"
-                    >
+                    <div class="booking-contact">
 
-
-                        <div class="form-row">
-
-
-                            <div class="form-group">
-
-                                <label for="name">
-                                    Name
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    placeholder="Your name"
-                                    required
-                                >
-
-                            </div>
-
-
-                            <div class="form-group">
-
-                                <label for="email">
-                                    Email
-                                </label>
-
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    placeholder="your@email.com"
-                                    required
-                                >
-
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="message">
-                                Remark
-                            </label>
-
-                            <textarea
-                                id="message"
-                                name="message"
-                                placeholder="Tell us what you have in mind..."
-                                required
-                            ></textarea>
-
-                        </div>
-
-
-                        <button
-                            type="submit"
-                            class="contact-submit"
-                        >
-                            Send Message
-                        </button>
-
-
-                        <p class="contact-note">
-                            Thanks for reaching out —
-                            we will get in touch with you.
+                        <p>
+                            For booking inquiries, please contact us at
+                            <a href="mailto:camona.booking@gmail.com">camona.booking@gmail.com</a>.
                         </p>
 
-
-                    </form>
+                    </div>
 
 
                 </section>
@@ -2326,19 +2923,19 @@ really big emotions
 
         <div class="socials">
 
-            <a href="#">
+            <a href="https://www.instagram.com/camona.mp3/">
                 Instagram
             </a>
 
-            <a href="#">
+            <a href="https://www.youtube.com/@camona.mp3">
                 YouTube
             </a>
 
-            <a href="#">
+            <a href="https://open.spotify.com/artist/6of3xu0j18jPuFwPFxn4DB">
                 Spotify
             </a>
 
-            <a href="#">
+            <a href="https://tidal.com/artist/52367829">
                 Tidal
             </a>
 
@@ -2366,6 +2963,46 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 });
+</script>
+
+
+<script id="camona-logo-navigation">
+(function () {
+    function setupCamonaLogo() {
+        const logo = document.querySelector(
+            '.logo, .site-logo, .main-logo, .landing-logo, [class*="logo"]'
+        );
+        const landing = document.querySelector(
+            '.landing, #landing, .intro, .splash, .hero'
+        );
+
+        if (!logo || !landing || logo.dataset.camonaBound === "true") return;
+        logo.dataset.camonaBound = "true";
+
+        logo.style.cursor = "pointer";
+        logo.setAttribute("role", "button");
+        logo.setAttribute("tabindex", "0");
+        logo.setAttribute("aria-label", "Return to the landing page");
+
+        function returnToLanding() {
+            landing.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        logo.addEventListener("click", returnToLanding);
+        logo.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                returnToLanding();
+            }
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", setupCamonaLogo);
+    } else {
+        setupCamonaLogo();
+    }
+})();
 </script>
 
 </body>

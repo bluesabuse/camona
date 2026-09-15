@@ -117,7 +117,9 @@
             z-index: 1000;
 
             /*
-                The logo 
+                The logo is completely independent
+                from the navigation and stays exactly
+                in the middle of the screen.
             */
 
             display: flex;
@@ -343,7 +345,8 @@
             justify-content: center;
 
             /*
-                This remains.
+                This remains centered regardless of
+                where the navigation sits.
             */
 
             width: 320px;
@@ -2451,6 +2454,42 @@ footer p {
     }
 </style>
 
+
+<style id="visible-about-photo-credit-fix">
+    .about-photo-credit {
+        display: block !important;
+        position: static !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 4px 0 0 0 !important;
+        padding: 0 !important;
+        color: #111111 !important;
+        background: transparent !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 8px !important;
+        line-height: 10px !important;
+        font-style: normal !important;
+        font-weight: 400 !important;
+        text-align: left !important;
+        z-index: 999 !important;
+        overflow: visible !important;
+    }
+</style>
+
+
+<style id="clickable-release-images">
+    .release-image-link {
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .release-image-link .release-cover {
+        cursor: pointer;
+    }
+</style>
+
 </head>
 
 
@@ -2463,7 +2502,7 @@ footer p {
   <div class="intro-overlay"></div>
   <div class="intro-logo-wrap">
     <img class="intro-logo" src="band-logo.png" alt="Band logo">
-<span class="about-photo-credit">Photo credits: lutecia.h</span>
+
     <span class="sparkle sparkle-1">✦</span><span class="sparkle sparkle-2">✧</span>
     <span class="sparkle sparkle-3">✦</span><span class="sparkle sparkle-4">✧</span>
   </div>
@@ -2510,6 +2549,8 @@ footer p {
                 src="band-logo.png"
                 alt="Your Band Logo"
             >
+<div class="about-photo-credit" aria-label="Photo credits: lutecia.h">Photo credits: lutecia.h</div>
+
 
         </a>
 
@@ -2624,20 +2665,22 @@ really big emotions
 
                         <div class="release">
 
-                            <div
+                            <a href="https://tidal.com/album/477142312" target="_blank" rel="noopener noreferrer" class="release-image-link">
+<div
                                 class="release-cover"
                                 style="
                                     background-image:
                                     url('album-cover-1.jpg');
                                 "
                             ></div>
+</a>
 
                             <h3>
                                 In my Bed
                             </h3>
 
                             <p>
-                                2025
+                                2026
                             </p>
 
                         </div>
@@ -2645,13 +2688,15 @@ really big emotions
 
                         <div class="release">
 
-                            <div
+                            <a href="https://tidal.com/album/464392950" target="_blank" rel="noopener noreferrer" class="release-image-link">
+<div
                                 class="release-cover"
                                 style="
                                     background-image:
                                     url('album-cover-2.jpg');
                                 "
                             ></div>
+</a>
 
                             <h3>
                                 Banter
@@ -2666,13 +2711,15 @@ really big emotions
 
                         <div class="release">
 
-                            <div
+                            <a href="https://tidal.com/album/404276013/u" target="_blank" rel="noopener noreferrer" class="release-image-link">
+<div
                                 class="release-cover"
                                 style="
                                     background-image:
                                     url('album-cover-3.jpg');
                                 "
                             ></div>
+</a>
 
                             <h3>
                                 As the Wind
@@ -2712,8 +2759,8 @@ really big emotions
                         <div class="video-container">
 
                             <iframe
-                                src="https://youtu.be/z7SoGZAPwrY?si=77wEC8rogHtsqyjN"
-                                title="Banter 2025"
+                                src="https://www.youtube.com/embed/VIDEO_ID"
+                                title="Band YouTube Video"
                                 allow="
                                     accelerometer;
                                     autoplay;
@@ -2752,7 +2799,87 @@ really big emotions
                         <div class="show-date">
 
                             <span class="show-day">
-                                14
+                                15
+                            </span>
+
+                            <span class="show-month">
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <div class="show-info">
+
+                            <h3>
+                                Berlin, Germany
+                            </h3>
+
+                            <p>
+                                Venue Name · 20:00
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="ticket-button"
+                        >
+                            Tickets
+                        </a>
+
+
+                    </div>
+
+
+                    <div class="show">
+
+
+                        <div class="show-date">
+
+                            <span class="show-day">
+                                22
+                            </span>
+
+                            <span class="show-month">
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <div class="show-info">
+
+                            <h3>
+                                Leipzig, Germany
+                            </h3>
+
+                            <p>
+                                Venue Name · 19:30
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="ticket-button"
+                        >
+                            Tickets
+                        </a>
+
+
+                    </div>
+
+
+                    <div class="show">
+
+
+                        <div class="show-date">
+
+                            <span class="show-day">
+                                05
                             </span>
 
                             <span class="show-month">
@@ -2765,91 +2892,11 @@ really big emotions
                         <div class="show-info">
 
                             <h3>
-                                Leipzig, Germany
+                                Hamburg, Germany
                             </h3>
 
                             <p>
-                                Horns Erben · 20:00
-                            </p>
-
-                        </div>
-
-
-                        <a
-                            href="#"
-                            class="ticket-button"
-                        >
-                            Tickets
-                        </a>
-
-
-                    </div>
-
-
-                    <div class="show">
-
-
-                        <div class="show-date">
-
-                            <span class="show-day">
-                               12
-                            </span>
-
-                            <span class="show-month">
-                               DEC
-                            </span>
-
-                        </div>
-
-
-                        <div class="show-info">
-
-                            <h3>
-                                Dresden, Germany
-                            </h3>
-
-                            <p>
-                               Blue Note  · 19:30
-                            </p>
-
-                        </div>
-
-
-                        <a
-                            href="#"
-                            class="ticket-button"
-                        >
-                            Tickets
-                        </a>
-
-
-                    </div>
-
-
-                    <div class="show">
-
-
-                        <div class="show-date">
-
-                            <span class="show-day">
-                                11
-                            </span>
-
-                            <span class="show-month">
-                               DEC
-                            </span>
-
-                        </div>
-
-
-                        <div class="show-info">
-
-                            <h3>
-                                Leipzig, Germany
-                            </h3>
-
-                            <p>
-                                GVL · 20:00
+                                Venue Name · 20:00
                             </p>
 
                         </div>
@@ -2886,7 +2933,8 @@ really big emotions
                         <p>
                             Want to book the band, ask a
                             question, or just say hello?
-                           
+                            Leave your details below and
+                            we will get in touch.
                         </p>
 
                     </div>
@@ -2896,7 +2944,7 @@ really big emotions
 
                         <p>
                             For booking inquiries, please contact us at
-                            <a href="mailto:camona.booking@gmail.com">camona.booking@gmail.com</a>.
+                            <a href="mailto:xxxgmail.com">xxxgmail.com</a>.
                         </p>
 
                     </div>
@@ -2923,27 +2971,27 @@ really big emotions
 
         <div class="socials">
 
-            <a href="https://www.instagram.com/camona.mp3/">
+            <a href="#">
                 Instagram
             </a>
 
-            <a href="https://www.youtube.com/@camona.mp3">
+            <a href="#">
                 YouTube
             </a>
 
-            <a href="https://open.spotify.com/artist/6of3xu0j18jPuFwPFxn4DB">
+            <a href="#">
                 Spotify
             </a>
 
-            <a href="https://tidal.com/artist/52367829">
-                Tidal
+            <a href="#">
+                Facebook
             </a>
 
         </div>
 
 
         <p>
-            © 2026 Camona
+            © 2026 camona
         </p>
 
 

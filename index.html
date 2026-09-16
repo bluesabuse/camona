@@ -975,7 +975,62 @@
             border:
                 none;
         }
+/* =================================
+   WOMEN IN JAZZ PRIZE 2026
+================================= */
 
+.prize-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.prize-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #e8ddd2;
+}
+
+.prize-text p {
+    margin-bottom: 20px;
+}
+
+.prize-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #d66a5c;
+    text-decoration: none;
+    border-bottom: 1px solid #d66a5c;
+    transition: color 0.3s ease;
+}
+
+.prize-link:hover {
+    color: #ffffff;
+}
+
+.prize-image {
+    min-height: 350px;
+    background-image: url("prize-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 768px) {
+    .prize-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .prize-image {
+        min-height: 280px;
+    }
+}
 
         /* =========================================
            SHOWS
@@ -2744,11 +2799,58 @@ really big emotions.
                         </div>
 
 
-                    </div>
+                  
 
 
                 </section>
+<!-- =================================
+     WOMEN IN JAZZ PRIZE 2026
+     NO HEADER NAVIGATION
+================================= -->
 
+<section id="women-in-jazz">
+
+    <h2 class="section-title">
+        Women in Jazz Prize 2026
+    </h2>
+
+    <div class="prize-grid">
+
+        <!-- TEXT ON THE LEFT -->
+
+        <div class="prize-text">
+
+            <p>
+                Add your text about the Women in Jazz Prize 2026 here.
+            </p>
+
+            <br>
+
+            <p>
+                Add more information about the prize,
+                nomination, achievement, or event here.
+            </p>
+
+            <!-- LINK AT THE END -->
+
+            <a
+                href="#"
+                class="prize-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Read more
+            </a>
+
+        </div>
+
+        <!-- PHOTO ON THE RIGHT -->
+
+        <div class="prize-image"></div>
+
+    </div>
+
+</section>
 
                 <!-- =================================
                      SHOWS
